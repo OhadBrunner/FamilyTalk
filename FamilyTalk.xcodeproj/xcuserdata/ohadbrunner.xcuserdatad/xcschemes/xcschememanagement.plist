@@ -7,7 +7,25 @@
 		<key>FamilyTalk.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>10</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F9443523204C2F26002B65E0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F944353A204C2F27002B65E0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9443545204C2F27002B65E0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

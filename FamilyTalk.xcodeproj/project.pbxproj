@@ -7,14 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11C4853675C7465CD00D9B6F /* Pods_FamilyTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141D2FBCD7148914EDEB13BB /* Pods_FamilyTalk.framework */; };
+		3D6A14ABBBA387E72C1A9A38 /* Pods_FamilyTalkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF5A653C9A570E5999CBF9D2 /* Pods_FamilyTalkTests.framework */; };
+		665EB84D7A45BE0933A70C07 /* Pods_FamilyTalkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCC405599D07737CC0F27AD /* Pods_FamilyTalkUITests.framework */; };
+		F927AE40204C395D00C87CED /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE3F204C395D00C87CED /* WelcomeViewController.swift */; };
+		F927AE42204C399200C87CED /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE41204C399200C87CED /* CategoryViewController.swift */; };
+		F927AE44204C39B000C87CED /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE43204C39B000C87CED /* ItemsViewController.swift */; };
+		F927AE46204C39D100C87CED /* FamilyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE45204C39D100C87CED /* FamilyChat.swift */; };
+		F927AE48204C39F000C87CED /* ChatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE47204C39F000C87CED /* ChatsVC.swift */; };
+		F927AE4B204C3A3100C87CED /* Helper Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE4A204C3A3100C87CED /* Helper Files.swift */; };
+		F927AE4D204C3AB100C87CED /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F927AE4C204C3AB100C87CED /* libsqlite3.0.tbd */; };
+		F927AE4F204C3C5300C87CED /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE4E204C3C5300C87CED /* Model.swift */; };
+		F927AE51204C3C7100C87CED /* ModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE50204C3C7100C87CED /* ModelFirebase.swift */; };
+		F927AE53204C3C8900C87CED /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE52204C3C8900C87CED /* UserModel.swift */; };
+		F927AE55204C3CA600C87CED /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE54204C3CA600C87CED /* MessageModel.swift */; };
+		F927AE57204C3CC400C87CED /* MessageFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE56204C3CC400C87CED /* MessageFirebase.swift */; };
+		F927AE59204C3CE400C87CED /* MessageSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE58204C3CE400C87CED /* MessageSQL.swift */; };
+		F927AE5B204C3CFF00C87CED /* ModelSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE5A204C3CFF00C87CED /* ModelSQL.swift */; };
+		F927AE5D204C3D1900C87CED /* LastUpdateTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE5C204C3D1900C87CED /* LastUpdateTable.swift */; };
+		F927AE5F204C3D3000C87CED /* UserFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE5E204C3D3000C87CED /* UserFirebase.swift */; };
+		F927AE61204C3D4D00C87CED /* UserSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE60204C3D4D00C87CED /* UserSQL.swift */; };
+		F927AE63204C3E6E00C87CED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F927AE62204C3E6E00C87CED /* GoogleService-Info.plist */; };
+		F927AE66204C3EEE00C87CED /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = F927AE65204C3EEE00C87CED /* test.m */; };
 		F9443528204C2F27002B65E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9443527204C2F27002B65E0 /* AppDelegate.swift */; };
-		F944352A204C2F27002B65E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9443529204C2F27002B65E0 /* ViewController.swift */; };
 		F944352D204C2F27002B65E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F944352B204C2F27002B65E0 /* Main.storyboard */; };
-		F9443530204C2F27002B65E0 /* FamilyTalk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F944352E204C2F27002B65E0 /* FamilyTalk.xcdatamodeld */; };
 		F9443532204C2F27002B65E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9443531204C2F27002B65E0 /* Assets.xcassets */; };
 		F9443535204C2F27002B65E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9443533204C2F27002B65E0 /* LaunchScreen.storyboard */; };
 		F9443540204C2F27002B65E0 /* FamilyTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944353F204C2F27002B65E0 /* FamilyTalkTests.swift */; };
 		F944354B204C2F27002B65E0 /* FamilyTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944354A204C2F27002B65E0 /* FamilyTalkUITests.swift */; };
+		F9B5FF1E204C517600F354EA /* dataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9B5FF1C204C517600F354EA /* dataBase.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +56,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		141D2FBCD7148914EDEB13BB /* Pods_FamilyTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		366CFA10FD641C1E7602F178 /* Pods-FamilyTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyTalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyTalk/Pods-FamilyTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		3DE7463ED72FBF1060B7DD39 /* Pods-FamilyTalkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyTalkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyTalkTests/Pods-FamilyTalkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		46B9B51138E151CB129261C4 /* Pods-FamilyTalkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyTalkUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyTalkUITests/Pods-FamilyTalkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		96EEF5D7D5F70D874CFFAADC /* Pods-FamilyTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyTalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyTalk/Pods-FamilyTalk.release.xcconfig"; sourceTree = "<group>"; };
+		B763B803C42A169E24691F78 /* Pods-FamilyTalkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyTalkUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyTalkUITests/Pods-FamilyTalkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D0B0F3385B0AEAE859F850A4 /* Pods-FamilyTalkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FamilyTalkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FamilyTalkTests/Pods-FamilyTalkTests.release.xcconfig"; sourceTree = "<group>"; };
+		DF5A653C9A570E5999CBF9D2 /* Pods_FamilyTalkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyTalkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECCC405599D07737CC0F27AD /* Pods_FamilyTalkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FamilyTalkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F927AE3F204C395D00C87CED /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F927AE41204C399200C87CED /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		F927AE43204C39B000C87CED /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		F927AE45204C39D100C87CED /* FamilyChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyChat.swift; sourceTree = "<group>"; };
+		F927AE47204C39F000C87CED /* ChatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsVC.swift; sourceTree = "<group>"; };
+		F927AE4A204C3A3100C87CED /* Helper Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper Files.swift"; sourceTree = "<group>"; };
+		F927AE4C204C3AB100C87CED /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		F927AE4E204C3C5300C87CED /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F927AE50204C3C7100C87CED /* ModelFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFirebase.swift; sourceTree = "<group>"; };
+		F927AE52204C3C8900C87CED /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F927AE54204C3CA600C87CED /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		F927AE56204C3CC400C87CED /* MessageFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFirebase.swift; sourceTree = "<group>"; };
+		F927AE58204C3CE400C87CED /* MessageSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSQL.swift; sourceTree = "<group>"; };
+		F927AE5A204C3CFF00C87CED /* ModelSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSQL.swift; sourceTree = "<group>"; };
+		F927AE5C204C3D1900C87CED /* LastUpdateTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUpdateTable.swift; sourceTree = "<group>"; };
+		F927AE5E204C3D3000C87CED /* UserFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFirebase.swift; sourceTree = "<group>"; };
+		F927AE60204C3D4D00C87CED /* UserSQL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSQL.swift; sourceTree = "<group>"; };
+		F927AE62204C3E6E00C87CED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F927AE64204C3EED00C87CED /* FamilyTalk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FamilyTalk-Bridging-Header.h"; sourceTree = "<group>"; };
+		F927AE65204C3EEE00C87CED /* test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 		F9443524204C2F26002B65E0 /* FamilyTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9443527204C2F27002B65E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F9443529204C2F27002B65E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F944352C204C2F27002B65E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F944352F204C2F27002B65E0 /* FamilyTalk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FamilyTalk.xcdatamodel; sourceTree = "<group>"; };
 		F9443531204C2F27002B65E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9443534204C2F27002B65E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9443536204C2F27002B65E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +97,7 @@
 		F9443546204C2F27002B65E0 /* FamilyTalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FamilyTalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F944354A204C2F27002B65E0 /* FamilyTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTalkUITests.swift; sourceTree = "<group>"; };
 		F944354C204C2F27002B65E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9B5FF1D204C517600F354EA /* iOS_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_App.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F927AE4D204C3AB100C87CED /* libsqlite3.0.tbd in Frameworks */,
+				11C4853675C7465CD00D9B6F /* Pods_FamilyTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D6A14ABBBA387E72C1A9A38 /* Pods_FamilyTalkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +122,96 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665EB84D7A45BE0933A70C07 /* Pods_FamilyTalkUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A2DD012695E3C62C71ACF18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				366CFA10FD641C1E7602F178 /* Pods-FamilyTalk.debug.xcconfig */,
+				96EEF5D7D5F70D874CFFAADC /* Pods-FamilyTalk.release.xcconfig */,
+				3DE7463ED72FBF1060B7DD39 /* Pods-FamilyTalkTests.debug.xcconfig */,
+				D0B0F3385B0AEAE859F850A4 /* Pods-FamilyTalkTests.release.xcconfig */,
+				46B9B51138E151CB129261C4 /* Pods-FamilyTalkUITests.debug.xcconfig */,
+				B763B803C42A169E24691F78 /* Pods-FamilyTalkUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D235EB9BADC841E480810AC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F927AE4C204C3AB100C87CED /* libsqlite3.0.tbd */,
+				141D2FBCD7148914EDEB13BB /* Pods_FamilyTalk.framework */,
+				DF5A653C9A570E5999CBF9D2 /* Pods_FamilyTalkTests.framework */,
+				ECCC405599D07737CC0F27AD /* Pods_FamilyTalkUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F927AE3C204C391400C87CED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9B5FF1C204C517600F354EA /* dataBase.xcdatamodeld */,
+				F927AE4E204C3C5300C87CED /* Model.swift */,
+				F927AE50204C3C7100C87CED /* ModelFirebase.swift */,
+				F927AE52204C3C8900C87CED /* UserModel.swift */,
+				F927AE54204C3CA600C87CED /* MessageModel.swift */,
+				F927AE56204C3CC400C87CED /* MessageFirebase.swift */,
+				F927AE58204C3CE400C87CED /* MessageSQL.swift */,
+				F927AE5A204C3CFF00C87CED /* ModelSQL.swift */,
+				F927AE5C204C3D1900C87CED /* LastUpdateTable.swift */,
+				F927AE5E204C3D3000C87CED /* UserFirebase.swift */,
+				F927AE60204C3D4D00C87CED /* UserSQL.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F927AE3D204C392300C87CED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F944352B204C2F27002B65E0 /* Main.storyboard */,
+				F9443533204C2F27002B65E0 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F927AE3E204C392800C87CED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F927AE3F204C395D00C87CED /* WelcomeViewController.swift */,
+				F927AE41204C399200C87CED /* CategoryViewController.swift */,
+				F927AE43204C39B000C87CED /* ItemsViewController.swift */,
+				F927AE45204C39D100C87CED /* FamilyChat.swift */,
+				F927AE47204C39F000C87CED /* ChatsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F927AE49204C3A1400C87CED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F927AE62204C3E6E00C87CED /* GoogleService-Info.plist */,
+				F9443536204C2F27002B65E0 /* Info.plist */,
+				F927AE4A204C3A3100C87CED /* Helper Files.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F944351B204C2F26002B65E0 = {
 			isa = PBXGroup;
 			children = (
 				F9443526204C2F26002B65E0 /* FamilyTalk */,
+				F9443531204C2F27002B65E0 /* Assets.xcassets */,
 				F944353E204C2F27002B65E0 /* FamilyTalkTests */,
 				F9443549204C2F27002B65E0 /* FamilyTalkUITests */,
 				F9443525204C2F26002B65E0 /* Products */,
+				2A2DD012695E3C62C71ACF18 /* Pods */,
+				D235EB9BADC841E480810AC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +229,12 @@
 			isa = PBXGroup;
 			children = (
 				F9443527204C2F27002B65E0 /* AppDelegate.swift */,
-				F9443529204C2F27002B65E0 /* ViewController.swift */,
-				F944352B204C2F27002B65E0 /* Main.storyboard */,
-				F9443531204C2F27002B65E0 /* Assets.xcassets */,
-				F9443533204C2F27002B65E0 /* LaunchScreen.storyboard */,
-				F9443536204C2F27002B65E0 /* Info.plist */,
-				F944352E204C2F27002B65E0 /* FamilyTalk.xcdatamodeld */,
+				F927AE3C204C391400C87CED /* Model */,
+				F927AE3D204C392300C87CED /* View */,
+				F927AE3E204C392800C87CED /* Controller */,
+				F927AE49204C3A1400C87CED /* Supporting Files */,
+				F927AE65204C3EEE00C87CED /* test.m */,
+				F927AE64204C3EED00C87CED /* FamilyTalk-Bridging-Header.h */,
 			);
 			path = FamilyTalk;
 			sourceTree = "<group>";
@@ -135,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F944354F204C2F27002B65E0 /* Build configuration list for PBXNativeTarget "FamilyTalk" */;
 			buildPhases = (
+				980F13FDE9DC412E34F1422F /* [CP] Check Pods Manifest.lock */,
 				F9443520204C2F26002B65E0 /* Sources */,
 				F9443521204C2F26002B65E0 /* Frameworks */,
 				F9443522204C2F26002B65E0 /* Resources */,
+				5907E2FF3B6576B2370B20A6 /* [CP] Embed Pods Frameworks */,
+				C7F89A4573DC88A4CB2ADD01 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +284,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9443552204C2F27002B65E0 /* Build configuration list for PBXNativeTarget "FamilyTalkTests" */;
 			buildPhases = (
+				B4C018CDC31A925AD1457899 /* [CP] Check Pods Manifest.lock */,
 				F9443537204C2F27002B65E0 /* Sources */,
 				F9443538204C2F27002B65E0 /* Frameworks */,
 				F9443539204C2F27002B65E0 /* Resources */,
+				C978BEA8C3545D4F1C1D90EE /* [CP] Embed Pods Frameworks */,
+				7AA1FCDE5370313E4722CF21 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +305,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9443555204C2F27002B65E0 /* Build configuration list for PBXNativeTarget "FamilyTalkUITests" */;
 			buildPhases = (
+				EC1D55356007FE40D3C5C690 /* [CP] Check Pods Manifest.lock */,
 				F9443542204C2F27002B65E0 /* Sources */,
 				F9443543204C2F27002B65E0 /* Frameworks */,
 				F9443544204C2F27002B65E0 /* Resources */,
+				C04EEAD7C1E79C4F99661480 /* [CP] Embed Pods Frameworks */,
+				EDE1987412F44E5F9CB3E93B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,6 +334,7 @@
 				TargetAttributes = {
 					F9443523204C2F26002B65E0 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					F944353A204C2F27002B65E0 = {
@@ -238,6 +377,7 @@
 				F9443535204C2F27002B65E0 /* LaunchScreen.storyboard in Resources */,
 				F9443532204C2F27002B65E0 /* Assets.xcassets in Resources */,
 				F944352D204C2F27002B65E0 /* Main.storyboard in Resources */,
+				F927AE63204C3E6E00C87CED /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +397,192 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5907E2FF3B6576B2370B20A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FamilyTalk/Pods-FamilyTalk-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FamilyTalk/Pods-FamilyTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AA1FCDE5370313E4722CF21 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FamilyTalkTests/Pods-FamilyTalkTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		980F13FDE9DC412E34F1422F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FamilyTalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4C018CDC31A925AD1457899 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FamilyTalkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C04EEAD7C1E79C4F99661480 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FamilyTalkUITests/Pods-FamilyTalkUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7F89A4573DC88A4CB2ADD01 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FamilyTalk/Pods-FamilyTalk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C978BEA8C3545D4F1C1D90EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FamilyTalkTests/Pods-FamilyTalkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC1D55356007FE40D3C5C690 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FamilyTalkUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDE1987412F44E5F9CB3E93B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FamilyTalkUITests/Pods-FamilyTalkUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F9443520204C2F26002B65E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F944352A204C2F27002B65E0 /* ViewController.swift in Sources */,
+				F927AE4F204C3C5300C87CED /* Model.swift in Sources */,
+				F927AE46204C39D100C87CED /* FamilyChat.swift in Sources */,
+				F927AE5F204C3D3000C87CED /* UserFirebase.swift in Sources */,
+				F927AE42204C399200C87CED /* CategoryViewController.swift in Sources */,
+				F927AE44204C39B000C87CED /* ItemsViewController.swift in Sources */,
+				F927AE59204C3CE400C87CED /* MessageSQL.swift in Sources */,
+				F927AE48204C39F000C87CED /* ChatsVC.swift in Sources */,
+				F927AE4B204C3A3100C87CED /* Helper Files.swift in Sources */,
+				F927AE40204C395D00C87CED /* WelcomeViewController.swift in Sources */,
+				F927AE55204C3CA600C87CED /* MessageModel.swift in Sources */,
+				F927AE66204C3EEE00C87CED /* test.m in Sources */,
+				F927AE57204C3CC400C87CED /* MessageFirebase.swift in Sources */,
+				F927AE61204C3D4D00C87CED /* UserSQL.swift in Sources */,
+				F927AE5B204C3CFF00C87CED /* ModelSQL.swift in Sources */,
 				F9443528204C2F27002B65E0 /* AppDelegate.swift in Sources */,
-				F9443530204C2F27002B65E0 /* FamilyTalk.xcdatamodeld in Sources */,
+				F927AE51204C3C7100C87CED /* ModelFirebase.swift in Sources */,
+				F927AE53204C3C8900C87CED /* UserModel.swift in Sources */,
+				F9B5FF1E204C517600F354EA /* dataBase.xcdatamodeld in Sources */,
+				F927AE5D204C3D1900C87CED /* LastUpdateTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,14 +746,18 @@
 		};
 		F9443550204C2F27002B65E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 366CFA10FD641C1E7602F178 /* Pods-FamilyTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SYV24P5P98;
-				INFOPLIST_FILE = FamilyTalk/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FamilyTalk/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Brunner.FamilyTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FamilyTalk/FamilyTalk-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -443,14 +765,17 @@
 		};
 		F9443551204C2F27002B65E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96EEF5D7D5F70D874CFFAADC /* Pods-FamilyTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SYV24P5P98;
-				INFOPLIST_FILE = FamilyTalk/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FamilyTalk/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Brunner.FamilyTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FamilyTalk/FamilyTalk-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -458,6 +783,7 @@
 		};
 		F9443553204C2F27002B65E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DE7463ED72FBF1060B7DD39 /* Pods-FamilyTalkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +801,7 @@
 		};
 		F9443554204C2F27002B65E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0B0F3385B0AEAE859F850A4 /* Pods-FamilyTalkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +819,7 @@
 		};
 		F9443556204C2F27002B65E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46B9B51138E151CB129261C4 /* Pods-FamilyTalkUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +836,7 @@
 		};
 		F9443557204C2F27002B65E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B763B803C42A169E24691F78 /* Pods-FamilyTalkUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -564,13 +893,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F944352E204C2F27002B65E0 /* FamilyTalk.xcdatamodeld */ = {
+		F9B5FF1C204C517600F354EA /* dataBase.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F944352F204C2F27002B65E0 /* FamilyTalk.xcdatamodel */,
+				F9B5FF1D204C517600F354EA /* iOS_App.xcdatamodel */,
 			);
-			currentVersion = F944352F204C2F27002B65E0 /* FamilyTalk.xcdatamodel */;
-			path = FamilyTalk.xcdatamodeld;
+			currentVersion = F9B5FF1D204C517600F354EA /* iOS_App.xcdatamodel */;
+			name = dataBase.xcdatamodeld;
+			path = "../../../ios_app/iOS_App/Model/Data Model/dataBase.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
