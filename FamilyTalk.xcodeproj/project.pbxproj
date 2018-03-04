@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9443528204C2F27002B65E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9443527204C2F27002B65E0 /* AppDelegate.swift */; };
+		F944352A204C2F27002B65E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9443529204C2F27002B65E0 /* ViewController.swift */; };
+		F944352D204C2F27002B65E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F944352B204C2F27002B65E0 /* Main.storyboard */; };
+		F9443530204C2F27002B65E0 /* FamilyTalk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F944352E204C2F27002B65E0 /* FamilyTalk.xcdatamodeld */; };
+		F9443532204C2F27002B65E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9443531204C2F27002B65E0 /* Assets.xcassets */; };
+		F9443535204C2F27002B65E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9443533204C2F27002B65E0 /* LaunchScreen.storyboard */; };
+		F9443540204C2F27002B65E0 /* FamilyTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944353F204C2F27002B65E0 /* FamilyTalkTests.swift */; };
+		F944354B204C2F27002B65E0 /* FamilyTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944354A204C2F27002B65E0 /* FamilyTalkUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F944353C204C2F27002B65E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F944351C204C2F26002B65E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9443523204C2F26002B65E0;
+			remoteInfo = FamilyTalk;
+		};
+		F9443547204C2F27002B65E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F944351C204C2F26002B65E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9443523204C2F26002B65E0;
+			remoteInfo = FamilyTalk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9443524204C2F26002B65E0 /* FamilyTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9443527204C2F27002B65E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9443529204C2F27002B65E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F944352C204C2F27002B65E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F944352F204C2F27002B65E0 /* FamilyTalk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FamilyTalk.xcdatamodel; sourceTree = "<group>"; };
+		F9443531204C2F27002B65E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9443534204C2F27002B65E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9443536204C2F27002B65E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F944353B204C2F27002B65E0 /* FamilyTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FamilyTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F944353F204C2F27002B65E0 /* FamilyTalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTalkTests.swift; sourceTree = "<group>"; };
+		F9443541204C2F27002B65E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9443546204C2F27002B65E0 /* FamilyTalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FamilyTalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F944354A204C2F27002B65E0 /* FamilyTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTalkUITests.swift; sourceTree = "<group>"; };
+		F944354C204C2F27002B65E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9443521204C2F26002B65E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9443538204C2F27002B65E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9443543204C2F27002B65E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F944351B204C2F26002B65E0 = {
+			isa = PBXGroup;
+			children = (
+				F9443526204C2F26002B65E0 /* FamilyTalk */,
+				F944353E204C2F27002B65E0 /* FamilyTalkTests */,
+				F9443549204C2F27002B65E0 /* FamilyTalkUITests */,
+				F9443525204C2F26002B65E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9443525204C2F26002B65E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9443524204C2F26002B65E0 /* FamilyTalk.app */,
+				F944353B204C2F27002B65E0 /* FamilyTalkTests.xctest */,
+				F9443546204C2F27002B65E0 /* FamilyTalkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9443526204C2F26002B65E0 /* FamilyTalk */ = {
+			isa = PBXGroup;
+			children = (
+				F9443527204C2F27002B65E0 /* AppDelegate.swift */,
+				F9443529204C2F27002B65E0 /* ViewController.swift */,
+				F944352B204C2F27002B65E0 /* Main.storyboard */,
+				F9443531204C2F27002B65E0 /* Assets.xcassets */,
+				F9443533204C2F27002B65E0 /* LaunchScreen.storyboard */,
+				F9443536204C2F27002B65E0 /* Info.plist */,
+				F944352E204C2F27002B65E0 /* FamilyTalk.xcdatamodeld */,
+			);
+			path = FamilyTalk;
+			sourceTree = "<group>";
+		};
+		F944353E204C2F27002B65E0 /* FamilyTalkTests */ = {
+			isa = PBXGroup;
+			children = (
+				F944353F204C2F27002B65E0 /* FamilyTalkTests.swift */,
+				F9443541204C2F27002B65E0 /* Info.plist */,
+			);
+			path = FamilyTalkTests;
+			sourceTree = "<group>";
+		};
+		F9443549204C2F27002B65E0 /* FamilyTalkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F944354A204C2F27002B65E0 /* FamilyTalkUITests.swift */,
+				F944354C204C2F27002B65E0 /* Info.plist */,
+			);
+			path = FamilyTalkUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9443523204C2F26002B65E0 /* FamilyTalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F944354F204C2F27002B65E0 /* Build configuration list for PBXNativeTarget "FamilyTalk" */;
+			buildPhases = (
+				F9443520204C2F26002B65E0 /* Sources */,
+				F9443521204C2F26002B65E0 /* Frameworks */,
+				F9443522204C2F26002B65E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FamilyTalk;
+			productName = FamilyTalk;
+			productReference = F9443524204C2F26002B65E0 /* FamilyTalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F944353A204C2F27002B65E0 /* FamilyTalkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9443552204C2F27002B65E0 /* Build configuration list for PBXNativeTarget "FamilyTalkTests" */;
+			buildPhases = (
+				F9443537204C2F27002B65E0 /* Sources */,
+				F9443538204C2F27002B65E0 /* Frameworks */,
+				F9443539204C2F27002B65E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F944353D204C2F27002B65E0 /* PBXTargetDependency */,
+			);
+			name = FamilyTalkTests;
+			productName = FamilyTalkTests;
+			productReference = F944353B204C2F27002B65E0 /* FamilyTalkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9443545204C2F27002B65E0 /* FamilyTalkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9443555204C2F27002B65E0 /* Build configuration list for PBXNativeTarget "FamilyTalkUITests" */;
+			buildPhases = (
+				F9443542204C2F27002B65E0 /* Sources */,
+				F9443543204C2F27002B65E0 /* Frameworks */,
+				F9443544204C2F27002B65E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9443548204C2F27002B65E0 /* PBXTargetDependency */,
+			);
+			name = FamilyTalkUITests;
+			productName = FamilyTalkUITests;
+			productReference = F9443546204C2F27002B65E0 /* FamilyTalkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F944351C204C2F26002B65E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Ohad Brunner";
+				TargetAttributes = {
+					F9443523204C2F26002B65E0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F944353A204C2F27002B65E0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F9443523204C2F26002B65E0;
+					};
+					F9443545204C2F27002B65E0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F9443523204C2F26002B65E0;
+					};
+				};
+			};
+			buildConfigurationList = F944351F204C2F26002B65E0 /* Build configuration list for PBXProject "FamilyTalk" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F944351B204C2F26002B65E0;
+			productRefGroup = F9443525204C2F26002B65E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9443523204C2F26002B65E0 /* FamilyTalk */,
+				F944353A204C2F27002B65E0 /* FamilyTalkTests */,
+				F9443545204C2F27002B65E0 /* FamilyTalkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9443522204C2F26002B65E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9443535204C2F27002B65E0 /* LaunchScreen.storyboard in Resources */,
+				F9443532204C2F27002B65E0 /* Assets.xcassets in Resources */,
+				F944352D204C2F27002B65E0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9443539204C2F27002B65E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9443544204C2F27002B65E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9443520204C2F26002B65E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F944352A204C2F27002B65E0 /* ViewController.swift in Sources */,
+				F9443528204C2F27002B65E0 /* AppDelegate.swift in Sources */,
+				F9443530204C2F27002B65E0 /* FamilyTalk.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9443537204C2F27002B65E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9443540204C2F27002B65E0 /* FamilyTalkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9443542204C2F27002B65E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F944354B204C2F27002B65E0 /* FamilyTalkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F944353D204C2F27002B65E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9443523204C2F26002B65E0 /* FamilyTalk */;
+			targetProxy = F944353C204C2F27002B65E0 /* PBXContainerItemProxy */;
+		};
+		F9443548204C2F27002B65E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9443523204C2F26002B65E0 /* FamilyTalk */;
+			targetProxy = F9443547204C2F27002B65E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F944352B204C2F27002B65E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F944352C204C2F27002B65E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9443533204C2F27002B65E0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9443534204C2F27002B65E0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F944354D204C2F27002B65E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F944354E204C2F27002B65E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9443550204C2F27002B65E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYV24P5P98;
+				INFOPLIST_FILE = FamilyTalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Brunner.FamilyTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9443551204C2F27002B65E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYV24P5P98;
+				INFOPLIST_FILE = FamilyTalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Brunner.FamilyTalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9443553204C2F27002B65E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYV24P5P98;
+				INFOPLIST_FILE = FamilyTalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Brunner.FamilyTalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FamilyTalk.app/FamilyTalk";
+			};
+			name = Debug;
+		};
+		F9443554204C2F27002B65E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYV24P5P98;
+				INFOPLIST_FILE = FamilyTalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Brunner.FamilyTalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FamilyTalk.app/FamilyTalk";
+			};
+			name = Release;
+		};
+		F9443556204C2F27002B65E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYV24P5P98;
+				INFOPLIST_FILE = FamilyTalkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Brunner.FamilyTalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FamilyTalk;
+			};
+			name = Debug;
+		};
+		F9443557204C2F27002B65E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SYV24P5P98;
+				INFOPLIST_FILE = FamilyTalkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Brunner.FamilyTalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FamilyTalk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F944351F204C2F26002B65E0 /* Build configuration list for PBXProject "FamilyTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F944354D204C2F27002B65E0 /* Debug */,
+				F944354E204C2F27002B65E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F944354F204C2F27002B65E0 /* Build configuration list for PBXNativeTarget "FamilyTalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9443550204C2F27002B65E0 /* Debug */,
+				F9443551204C2F27002B65E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9443552204C2F27002B65E0 /* Build configuration list for PBXNativeTarget "FamilyTalkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9443553204C2F27002B65E0 /* Debug */,
+				F9443554204C2F27002B65E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9443555204C2F27002B65E0 /* Build configuration list for PBXNativeTarget "FamilyTalkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9443556204C2F27002B65E0 /* Debug */,
+				F9443557204C2F27002B65E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F944352E204C2F27002B65E0 /* FamilyTalk.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F944352F204C2F27002B65E0 /* FamilyTalk.xcdatamodel */,
+			);
+			currentVersion = F944352F204C2F27002B65E0 /* FamilyTalk.xcdatamodel */;
+			path = FamilyTalk.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F944351C204C2F26002B65E0 /* Project object */;
+}
