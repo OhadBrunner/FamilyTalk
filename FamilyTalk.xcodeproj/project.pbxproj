@@ -36,6 +36,7 @@
 		F9443540204C2F27002B65E0 /* FamilyTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944353F204C2F27002B65E0 /* FamilyTalkTests.swift */; };
 		F944354B204C2F27002B65E0 /* FamilyTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944354A204C2F27002B65E0 /* FamilyTalkUITests.swift */; };
 		F9B5FF1E204C517600F354EA /* dataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9B5FF1C204C517600F354EA /* dataBase.xcdatamodeld */; };
+		F9F81C96204D713A00813DCB /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F81C95204D713A00813DCB /* SwipeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		F944354A204C2F27002B65E0 /* FamilyTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTalkUITests.swift; sourceTree = "<group>"; };
 		F944354C204C2F27002B65E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9B5FF1D204C517600F354EA /* iOS_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_App.xcdatamodel; sourceTree = "<group>"; };
+		F9F81C95204D713A00813DCB /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				F927AE43204C39B000C87CED /* ItemsViewController.swift */,
 				F927AE45204C39D100C87CED /* FamilyChat.swift */,
 				F927AE47204C39F000C87CED /* ChatsVC.swift */,
+				F9F81C95204D713A00813DCB /* SwipeTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				F927AE46204C39D100C87CED /* FamilyChat.swift in Sources */,
 				F927AE5F204C3D3000C87CED /* UserFirebase.swift in Sources */,
 				F927AE42204C399200C87CED /* CategoryViewController.swift in Sources */,
+				F9F81C96204D713A00813DCB /* SwipeTableViewController.swift in Sources */,
 				F927AE44204C39B000C87CED /* ItemsViewController.swift in Sources */,
 				F927AE59204C3CE400C87CED /* MessageSQL.swift in Sources */,
 				F927AE48204C39F000C87CED /* ChatsVC.swift in Sources */,

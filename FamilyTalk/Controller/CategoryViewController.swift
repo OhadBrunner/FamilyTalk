@@ -10,13 +10,12 @@
 import UIKit
 import CoreData
 
-class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CategoryViewController: SwipeTableViewController {
     
     
     var categories = [Category]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     
     @IBOutlet weak var ListTableView: UITableView!
     
@@ -24,27 +23,27 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ListTableView.dataSource = self
-        ListTableView.delegate = self
-        
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        //print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
         loadCategories()
+        
+        ListTableView.rowHeight = 80.0
     }
     
     //MARK: - TableView DataSource Methods
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return categories.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
-        
+        let cell = super.tableView(ListTableView, cellForRowAt: indexPath)
+    
         cell.textLabel?.text = categories[indexPath.row].name
-        
+    
         return cell
         
     }
@@ -52,7 +51,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     
     //MARK: - TableView Delegate Methods
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         performSegue(withIdentifier: "goToItems", sender: self)
     }
@@ -97,8 +96,17 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         ListTableView.reloadData()
     }
     
-    //MARK: - Add New Categories
+    //MARK: - Delete Data From Swipe
     
+    override func updateModel(at indexPath: IndexPath) {
+        
+        self.context.delete(self.categories[indexPath.row])
+        self.categories.remove(at: indexPath.row)
+    
+    }
+    
+    
+    //MARK: - Add New Categories
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
@@ -108,7 +116,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
             
-            let newCategory = Category(context: self.context) // אפשר לאתחל כמו שאני מאתחל הודעה? וזה ישר שולח לדאטאבייס? או הפוך
+            let newCategory = Category(context: self.context)
             newCategory.name = textField.text!
             
             self.categories.append(newCategory)
@@ -126,6 +134,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
         present(alert, animated: true, completion: nil)
+        
     }
     
     
@@ -134,6 +143,6 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         performSegue(withIdentifier: "goToChat", sender: self)
     }
     
-    
 }
+
 

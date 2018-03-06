@@ -12,12 +12,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Arial.ttf">
+            <string>ArialMT</string>
+        </array>
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Medium</string>
             <string>AvenirNext-Regular</string>
-        </array>
-        <array key="BradleyHand-Bold.ttf">
-            <string>BradleyHandITCTT-Bold</string>
         </array>
     </customFonts>
     <scenes>
@@ -141,7 +141,7 @@
                                 <constraint firstAttribute="height" constant="40" id="68J-PG-fTm"/>
                                 <constraint firstAttribute="width" constant="150" id="xbY-hC-fqe"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
                             <state key="normal" title="Register">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -318,7 +318,7 @@
                                 <constraint firstAttribute="height" constant="40" id="Pqz-MZ-Z9M"/>
                                 <constraint firstAttribute="width" constant="120" id="mqq-dJ-xEk"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="21"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
                             <state key="normal" title="Sign In">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
@@ -451,7 +451,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="59W-z9-fUQ" kind="relationship" relationship="rootViewController" id="xKP-1b-f20"/>
+                        <segue destination="oSc-WF-8mZ" kind="relationship" relationship="rootViewController" id="uZ2-3X-WGD"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HdP-04-Cno" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -459,9 +459,56 @@
             <point key="canvasLocation" x="2894" y="183"/>
         </scene>
         <!--Family Cart-->
+        <scene sceneID="DWL-ga-p3B">
+            <objects>
+                <tableViewController storyboardIdentifier="myListVC" id="oSc-WF-8mZ" customClass="CategoryViewController" customModule="FamilyTalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nKo-Sl-Zcy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="uaQ-FH-IQi" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uaQ-FH-IQi" id="ocX-Uh-TJ8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oSc-WF-8mZ" id="cPj-fa-PGR"/>
+                            <outlet property="delegate" destination="oSc-WF-8mZ" id="TFe-uo-r4T"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Family Cart" id="ZSY-af-YIe">
+                        <barButtonItem key="leftBarButtonItem" title="Family Talk" id="Cqp-hj-fnN">
+                            <color key="tintColor" red="0.76948314905166626" green="0.080063126981258392" blue="0.17307451367378235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="FamilyTalkPressed:" destination="oSc-WF-8mZ" id="Wcb-B0-inc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lUj-fQ-ok0">
+                            <color key="tintColor" red="0.76948314905166626" green="0.080063126981258392" blue="0.17307451367378235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="oSc-WF-8mZ" id="EXf-N8-BzS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ListTableView" destination="nKo-Sl-Zcy" id="IGH-cr-Tcc"/>
+                        <segue destination="iCa-Ms-sbF" kind="show" identifier="goToItems" id="wPP-XX-ypM"/>
+                        <segue destination="iAC-Z5-ekh" kind="show" identifier="goToChat" id="h0J-Cz-A8C"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYm-uz-e5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4001" y="-483"/>
+        </scene>
+        <!--Family Cart-->
         <scene sceneID="Hdp-nl-mqj">
             <objects>
-                <viewController storyboardIdentifier="myListVC" id="59W-z9-fUQ" customClass="CategoryViewController" customModule="FamilyTalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="59W-z9-fUQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fO1-Q4-GPl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -471,7 +518,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="l2P-xk-x3t">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="l2P-xk-x3t" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l2P-xk-x3t" id="m20-bA-q9c">
@@ -501,13 +548,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ListTableView" destination="Z4P-Hz-rGH" id="6dW-he-ux6"/>
-                        <segue destination="iCa-Ms-sbF" kind="show" identifier="goToItems" id="UDf-Qh-PiH"/>
-                        <segue destination="iAC-Z5-ekh" kind="show" identifier="goToChat" id="v7q-yH-4dt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RbE-BN-fgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3978" y="152"/>
+            <point key="canvasLocation" x="4247" y="804"/>
         </scene>
         <!--Items View Controller-->
         <scene sceneID="Njd-CZ-TxJ">
@@ -518,7 +563,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemsCell" id="SP1-fM-4wf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="SP1-fM-4wf">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SP1-fM-4wf" id="cP7-le-I3d">
