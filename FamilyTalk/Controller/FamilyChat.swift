@@ -28,6 +28,7 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     }
     
     var items = [MessageModel]()
+    var observerId:Any?
     let imagePicker = UIImagePickerController()
     let barHeight: CGFloat = 50
     var currentUser: UserModel?
@@ -42,25 +43,7 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.contentInset.bottom = self.barHeight
         self.tableView.scrollIndicatorInsets.bottom = self.barHeight
-        
     }
-    
-    
-    
-    //Downloads messages
-    func fetchData() {
-        MessageModel.downloadAllMessages(completion: {[weak weakSelf = self] (message) in
-            weakSelf?.items.append(message)
-            weakSelf?.items.sort{ $0.timestamp < $1.timestamp }
-            DispatchQueue.main.async {
-                if self.items.isEmpty == false {
-                    self.tableView.reloadData()
-                    self.tableView.scrollToRow(at: IndexPath.init(row: self.items.count - 1, section: 0), at: .bottom, animated: false)
-                }
-            }
-        })
-    }
-    
     
     func animateExtraButtons(toHide: Bool)  {
         switch toHide {
@@ -134,16 +117,6 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     }
     
     
-    
-    
-    /////////////////////////////////////////////////////////////////////
-    
-    
-    
-    
-    
-    
-    
     //MARK: NotificationCenter handlers
     @objc func showKeyboard(notification: Notification) {
         if let frame = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as? NSValue {
@@ -172,7 +145,7 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch self.items[indexPath.row].owner {
-        case .receiver:
+        case .sender:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Receiver", for: indexPath) as! ReceiverCell
             cell.clearCellData()
             switch self.items[indexPath.row].type {
@@ -185,7 +158,7 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
                 } else {
                     cell.messageBackground.image = UIImage.init(named: "loading")
                     let msg = self.items[indexPath.row]
-                    Model.instance.getImage(message: msg) {
+                    ModelFileStore.getImage(message: msg) {
                         (state) in
                         if state == true {
                             DispatchQueue.main.async {
@@ -196,7 +169,7 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
                 }
             }
             return cell
-        case .sender:
+        case .receiver:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Sender", for: indexPath) as! SenderCell
             cell.clearCellData()
             
@@ -218,7 +191,7 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
                 } else {
                     cell.messageBackground.image = UIImage.init(named: "loading")
                     let msg = self.items[indexPath.row]
-                    Model.instance.getImage(message: msg) {
+                    ModelFileStore.getImage(message: msg) {
                         (state) in
                         if state == true {
                             DispatchQueue.main.async {
@@ -266,7 +239,27 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         super.viewDidLoad()
         currentUserID = UserModel.getCurrentUserID()
         self.customization()
-        self.fetchData()
+        
+        _ = ModelNotification.messagesList.observe { (list) in
+            
+            if list != nil {
+                self.items = list!
+                self.tableView.reloadData()
+            }
+        }
+        
+        Model.instance.getAllMessagesAndObserve()
+    }
+    
+    deinit{
+        if (observerId != nil){
+            ModelNotification.removeObserver(observer: observerId!)
+        }
+    }
+    
+    func messagesListDidUpdate(notification:NSNotification){
+        self.items = notification.userInfo?["messages"] as! [MessageModel]
+        self.tableView!.reloadData()
     }
 }
 

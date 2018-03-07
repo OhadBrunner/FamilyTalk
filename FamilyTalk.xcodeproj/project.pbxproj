@@ -35,8 +35,12 @@
 		F9443535204C2F27002B65E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9443533204C2F27002B65E0 /* LaunchScreen.storyboard */; };
 		F9443540204C2F27002B65E0 /* FamilyTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944353F204C2F27002B65E0 /* FamilyTalkTests.swift */; };
 		F944354B204C2F27002B65E0 /* FamilyTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944354A204C2F27002B65E0 /* FamilyTalkUITests.swift */; };
+		F97AF114204EBCAD00AC1121 /* LocalFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AF113204EBCAD00AC1121 /* LocalFileStore.swift */; };
+		F97AF116204EBCBA00AC1121 /* FirebaseFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AF115204EBCBA00AC1121 /* FirebaseFileStore.swift */; };
+		F97AF118204EBCC600AC1121 /* ModelFilesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AF117204EBCC600AC1121 /* ModelFilesStore.swift */; };
 		F9B5FF1E204C517600F354EA /* dataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9B5FF1C204C517600F354EA /* dataBase.xcdatamodeld */; };
 		F9F81C96204D713A00813DCB /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F81C95204D713A00813DCB /* SwipeTableViewController.swift */; };
+		F9F81C98204EB9BD00813DCB /* Date+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F81C97204EB9BD00813DCB /* Date+Firebase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,8 +102,12 @@
 		F9443546204C2F27002B65E0 /* FamilyTalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FamilyTalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F944354A204C2F27002B65E0 /* FamilyTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTalkUITests.swift; sourceTree = "<group>"; };
 		F944354C204C2F27002B65E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F97AF113204EBCAD00AC1121 /* LocalFileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileStore.swift; sourceTree = "<group>"; };
+		F97AF115204EBCBA00AC1121 /* FirebaseFileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFileStore.swift; sourceTree = "<group>"; };
+		F97AF117204EBCC600AC1121 /* ModelFilesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFilesStore.swift; sourceTree = "<group>"; };
 		F9B5FF1D204C517600F354EA /* iOS_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_App.xcdatamodel; sourceTree = "<group>"; };
 		F9F81C95204D713A00813DCB /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
+		F9F81C97204EB9BD00813DCB /* Date+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Firebase.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,7 @@
 		F927AE3C204C391400C87CED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F97AF112204EBC9C00AC1121 /* FilesManagement */,
 				F9B5FF1C204C517600F354EA /* dataBase.xcdatamodeld */,
 				F927AE4E204C3C5300C87CED /* Model.swift */,
 				F927AE50204C3C7100C87CED /* ModelFirebase.swift */,
@@ -169,6 +178,7 @@
 				F927AE5C204C3D1900C87CED /* LastUpdateTable.swift */,
 				F927AE5E204C3D3000C87CED /* UserFirebase.swift */,
 				F927AE60204C3D4D00C87CED /* UserSQL.swift */,
+				F9F81C97204EB9BD00813DCB /* Date+Firebase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,6 +268,16 @@
 				F944354C204C2F27002B65E0 /* Info.plist */,
 			);
 			path = FamilyTalkUITests;
+			sourceTree = "<group>";
+		};
+		F97AF112204EBC9C00AC1121 /* FilesManagement */ = {
+			isa = PBXGroup;
+			children = (
+				F97AF113204EBCAD00AC1121 /* LocalFileStore.swift */,
+				F97AF115204EBCBA00AC1121 /* FirebaseFileStore.swift */,
+				F97AF117204EBCC600AC1121 /* ModelFilesStore.swift */,
+			);
+			path = FilesManagement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -568,12 +588,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F927AE4F204C3C5300C87CED /* Model.swift in Sources */,
+				F97AF114204EBCAD00AC1121 /* LocalFileStore.swift in Sources */,
+				F97AF116204EBCBA00AC1121 /* FirebaseFileStore.swift in Sources */,
 				F927AE46204C39D100C87CED /* FamilyChat.swift in Sources */,
 				F927AE5F204C3D3000C87CED /* UserFirebase.swift in Sources */,
 				F927AE42204C399200C87CED /* CategoryViewController.swift in Sources */,
 				F9F81C96204D713A00813DCB /* SwipeTableViewController.swift in Sources */,
 				F927AE44204C39B000C87CED /* ItemsViewController.swift in Sources */,
 				F927AE59204C3CE400C87CED /* MessageSQL.swift in Sources */,
+				F97AF118204EBCC600AC1121 /* ModelFilesStore.swift in Sources */,
 				F927AE48204C39F000C87CED /* ChatsVC.swift in Sources */,
 				F927AE4B204C3A3100C87CED /* Helper Files.swift in Sources */,
 				F927AE40204C395D00C87CED /* WelcomeViewController.swift in Sources */,
@@ -587,6 +610,7 @@
 				F927AE53204C3C8900C87CED /* UserModel.swift in Sources */,
 				F9B5FF1E204C517600F354EA /* dataBase.xcdatamodeld in Sources */,
 				F927AE5D204C3D1900C87CED /* LastUpdateTable.swift in Sources */,
+				F9F81C98204EB9BD00813DCB /* Date+Firebase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,6 +781,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SYV24P5P98;
 				INFOPLIST_FILE = "$(SRCROOT)/FamilyTalk/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Brunner.FamilyTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -776,6 +801,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SYV24P5P98;
 				INFOPLIST_FILE = "$(SRCROOT)/FamilyTalk/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Brunner.FamilyTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";

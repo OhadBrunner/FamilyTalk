@@ -10,34 +10,41 @@
 import Foundation
 import UIKit
 import Firebase
-import SQLite3
 
-extension Date {
+
+class ModelNotificationBase<T>{
+    var name:String?
     
-    func toFirebase()->Double{
-        return self.timeIntervalSince1970 * 1000
+    init(name:String){
+        self.name = name
     }
     
-    static func fromFirebase(_ interval:String)->Date{
-        return Date(timeIntervalSince1970: Double(interval)!)
-    }
-    
-    static func fromFirebase(_ interval:Double)->Date{
-        if (interval>9999999999){
-            return Date(timeIntervalSince1970: interval/1000)
-        }else{
-            return Date(timeIntervalSince1970: interval)
+    func observe(callback:@escaping (T?)->Void)->Any{
+        return NotificationCenter.default.addObserver(forName: NSNotification.Name(name!), object: nil, queue: nil) { (data) in
+            if let data = data.userInfo?["data"] as? T {
+                callback(data)
+            }
         }
     }
     
-    var stringValue: String {
-        let formatter = DateFormatter()
-        formatter.timeZone = TimeZone.current
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        return formatter.string(from: self)
+    func post(data:T){
+        NotificationCenter.default.post(name: NSNotification.Name(name!), object: self, userInfo: ["data":data])
     }
-    
 }
+
+class ModelNotification{
+//    static let StudentList = ModelNotificationBase<[Student]>(name: "StudentListNotificatio")
+//    static let Student = ModelNotificationBase<Student>(name: "StudentNotificatio")
+    
+    static let messagesList = ModelNotificationBase<[MessageModel]>(name: "messagesListNotificatio")
+    static let Message = ModelNotificationBase<MessageModel>(name: "MessageNotificatio")
+    
+    static func removeObserver(observer:Any){
+        NotificationCenter.default.removeObserver(observer)
+    }
+}
+
+
 
 
 class Model {
@@ -48,179 +55,109 @@ class Model {
     lazy private var modelFirebase:ModelFirebase? = ModelFirebase()
     
     
-    
     private init(){
     }
     
-    
+    func clear(){
+        print("Model.clear")
+        MessageModel.clearObservers()
+    }
     
     func addMessage(msg: MessageModel){
-        
         if let currentUserID = Auth.auth().currentUser?.uid {
-            
             switch msg.type {
-                
             case .photo:
                 let imageData = msg.content as! UIImage
                 let time = "\(msg.timestamp)"
-                
-                saveImage(imageData: imageData, timeStamp: time) {
+                ModelFileStore.saveImage(imageData: imageData, timeStamp: time) {
                     (path) in
                     let values = ["type": "photo", "content": path!, "fromID": currentUserID, "timestamp": msg.timestamp] as [String : Any]
-                    
                     MessageModel.saveMessageToFirebase(values: values, completion: {(_) in
                     })
                 }
-                
             case .text:
-                
                 let values = ["type": "text", "content": msg.content, "fromID": currentUserID, "timestamp": msg.timestamp] as [String : Any]
-                
                 MessageModel.saveMessageToFirebase(values: values, completion: {(_) in
                 })
-                
             }
         }
         //save locally
         msg.addMessageToLocalDb(database: self.modelSQL?.database)
     }
     
-    ///////////////////////////////////////////////////////////////
+
     
-    
-    
-    
-    /*
-     
-     func getStudentById(id:String, callback:@escaping (Student)->Void){
-     }
-     
-     func getAllStudents(callback:@escaping ([Student])->Void){ //asyncronic
-     // get last update date from SQL
-     let lastUpdateDate = LastUpdateTable.getLastUpdateDate(database: modelSql?.database, table: Student.ST_TABLE)
-     
-     // get all updated records from firebase
-     modelFirebase?.getAllStudents(lastUpdateDate, callback: { (students) in
-     //update the local db
-     print("got \(students.count) new records from FB")
-     var lastUpdate:Date?
-     for st in students{
-     st.addStudentToLocalDb(database: self.modelSql?.database)
-     if lastUpdate == nil{
-     lastUpdate = st.lastUpdate
-     }else{
-     if lastUpdate!.compare(st.lastUpdate!) == ComparisonResult.orderedAscending{
-     lastUpdate = st.lastUpdate
-     }
-     }
-     }
-     
-     //upadte the last update table
-     if (lastUpdate != nil){
-     LastUpdateTable.setLastUpdate(database: self.modelSql!.database, table: Student.ST_TABLE, lastUpdate: lastUpdate!)
-     }
-     
-     //get the complete list from local DB
-     let totalList = Student.getAllStudentsFromLocalDb(database: self.modelSql?.database)
-     
-     //return the list to the caller
-     callback(totalList)
-     })
-     }
-     
-     func getAllStudentsAndObserve(){
-     // get last update date from SQL
-     let lastUpdateDate = LastUpdateTable.getLastUpdateDate(database: modelSql?.database, table: Student.ST_TABLE)
-     
-     // get all updated records from firebase
-     modelFirebase?.getAllStudentsAndObserve(lastUpdateDate, callback: { (students) in
-     //update the local db
-     print("got \(students.count) new records from FB")
-     var lastUpdate:Date?
-     for st in students{
-     st.addStudentToLocalDb(database: self.modelSql?.database)
-     if lastUpdate == nil{
-     lastUpdate = st.lastUpdate
-     }else{
-     if lastUpdate!.compare(st.lastUpdate!) == ComparisonResult.orderedAscending{
-     lastUpdate = st.lastUpdate
-     }
-     }
-     }
-     
-     //upadte the last update table
-     if (lastUpdate != nil){
-     LastUpdateTable.setLastUpdate(database: self.modelSql!.database, table: Student.ST_TABLE, lastUpdate: lastUpdate!)
-     }
-     
-     //get the complete list from local DB
-     let totalList = Student.getAllStudentsFromLocalDb(database: self.modelSql?.database)
-     
-     //return the list to the observers using notification center
-     NotificationCenter.default.post(name: Notification.Name(rawValue:
-     notifyStudentListUpdate), object:nil , userInfo:["students":totalList])
-     })
-     }
-     */
-    
-    
-    
-    func saveImage(imageData: UIImage, timeStamp: String, callback:@escaping (String?)->Void){
-        //1. save image to Firebase
-        let image = UIImageJPEGRepresentation((imageData), 0.5)
-        let child = UUID().uuidString
-        MessageModel.saveMessageImageToFirebase(imageData: image!, child: child) {
-            (path) in
-            if path != nil {
-                //2. save image localy
-                self.saveImageToFile(image: imageData, name: timeStamp)
-            }
-            //3. notify the user on complete
-            callback(path)
-        }
-    }
-    
-    
-    func getImage(message: MessageModel, callback:@escaping (Bool)-> Void){
-        //1. try to get the image from local store
-        let localImageName = "\(message.timestamp)"
-        if let image = self.getImageFromFile(name: localImageName){
-            message.image = image
-            //print("from local")
-            callback(true)
-        }else{
-            //2. get the image from Firebase
-            //print("from firebase")
-            MessageModel.downloadImage(message: message) {
-                (state) in
-                if state == true {
-                    //3. save the image localy
-                    let image = message.image
-                    let time = "\(message.timestamp)"
-                    self.saveImageToFile(image: image!, name: time)
+    func getAllMessages(callback:@escaping ([MessageModel])->Void){
+        print("Model.getAllMessages")
+        
+        // get last update date from SQL
+        let lastUpdateDate = LastUpdateTable.getLastUpdateDate(database: modelSQL?.database, table: MessageModel.MSG_TABLE)
+        
+        // get all updated records from firebase
+        MessageModel.downloadAllMessages(lastUpdateDate) { (messages) in
+            //update the local db
+            print("got \(messages.count) new records from FB")
+            var lastUpdate:Date?
+            for ms in messages{
+                ms.addMessageToLocalDb(database: self.modelSQL?.database)
+                if lastUpdate == nil{
+                    let date = Date.fromFirebase(Double(ms.timestamp))
+                    lastUpdate = date
+                }else{
+                    if lastUpdate!.compare(lastUpdate!) == ComparisonResult.orderedAscending{
+                        let date = Date.fromFirebase(Double(ms.timestamp))
+                        lastUpdate = date
+                    }
                 }
-                callback(true)
             }
+            
+            //upadte the last update table
+            if (lastUpdate != nil){
+                LastUpdateTable.setLastUpdate(database: self.modelSQL!.database, table: MessageModel.MSG_TABLE, lastUpdate: lastUpdate!)
+            }
+            
+            //get the complete list from local DB
+            let totalList = MessageModel.getAllMessagesFromLocalDb(database: self.modelSQL?.database)
+            
+            //return the list to the caller
+            callback(totalList)
         }
     }
     
-    private func saveImageToFile(image: UIImage, name:String){
-        if let data = UIImageJPEGRepresentation(image, 0.8) {
-            let filename = getDocumentsDirectory().appendingPathComponent(name)
-            //print(filename)
-            try? data.write(to: filename)
+    func getAllMessagesAndObserve(){
+        print("Model.getAllStudentsAndObserve")
+        // get last update date from SQL
+        let lastUpdateDate = LastUpdateTable.getLastUpdateDate(database: modelSQL?.database, table: MessageModel.MSG_TABLE)
+        
+        // get all updated records from firebase
+        MessageModel.downloadAllMessagesAndObserve(lastUpdateDate) { (messages) in
+            //update the local db
+            print("got \(messages.count) new records from FB")
+            var lastUpdate:Date?
+            for ms in messages{
+                ms.addMessageToLocalDb(database: self.modelSQL?.database)
+                if lastUpdate == nil{
+                    let date = Date.fromFirebase(Double(ms.timestamp))
+                    lastUpdate = date
+                }else{
+                    if lastUpdate!.compare(lastUpdate!) == ComparisonResult.orderedAscending{
+                        let date = Date.fromFirebase(Double(ms.timestamp))
+                        lastUpdate = date
+                    }
+                }
+            }
+            
+            //upadte the last update table
+            if (lastUpdate != nil){
+                LastUpdateTable.setLastUpdate(database: self.modelSQL!.database, table: MessageModel.MSG_TABLE, lastUpdate: lastUpdate!)
+            }
+            
+            //get the complete list from local DB
+            let totalList = MessageModel.getAllMessagesFromLocalDb(database: self.modelSQL?.database)
+            print("\(totalList)")
+            
+            ModelNotification.messagesList.post(data: totalList)
         }
-    }
-    private func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in:
-            .userDomainMask)
-        let documentsDirectory = paths[0]
-        return documentsDirectory
-    }
-    
-    private func getImageFromFile(name:String)->UIImage?{
-        let filename = getDocumentsDirectory().appendingPathComponent(name)
-        return UIImage(contentsOfFile:filename.path)
     }
     
 }

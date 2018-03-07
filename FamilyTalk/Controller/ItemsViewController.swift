@@ -10,7 +10,7 @@
 import UIKit
 import CoreData
 
-class ItemsViewController: UITableViewController {
+class ItemsViewController: SwipeTableViewController {
     
     
     var itemArray = [Item]()
@@ -38,12 +38,20 @@ class ItemsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+      
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         let item = itemArray[indexPath.row]
         
         cell.textLabel?.text = item.title
+        
+        cell.backgroundColor = UIColor.purple.darken(byPercentage:
+            
+            CGFloat(indexPath.row) / CGFloat(itemArray.count)
+            
+        )
+        cell.textLabel?.textColor = UIColor.flatWhite()
+        cell.textLabel?.font = UIFont.init(name: "Euphemia UCAS", size: CGFloat(21.0))
         
         //item.done == true ? cell.accessoryType = .checkmark : cell.accessoryType = .none
         cell.accessoryType = item.done == true ? .checkmark : .none // shortened
@@ -125,6 +133,12 @@ class ItemsViewController: UITableViewController {
         }
         
         tableView.reloadData()
+    }
+    
+    override func updateModel(at indexPath: IndexPath) {
+   
+            self.context.delete(self.itemArray[indexPath.row])
+            self.itemArray.remove(at: indexPath.row)
     }
     
 }

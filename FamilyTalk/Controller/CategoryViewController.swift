@@ -9,6 +9,7 @@
 
 import UIKit
 import CoreData
+import ChameleonFramework
 
 class CategoryViewController: SwipeTableViewController {
     
@@ -27,7 +28,7 @@ class CategoryViewController: SwipeTableViewController {
         
         loadCategories()
         
-        ListTableView.rowHeight = 80.0
+        ListTableView.separatorStyle = .none
     }
     
     //MARK: - TableView DataSource Methods
@@ -43,9 +44,16 @@ class CategoryViewController: SwipeTableViewController {
         let cell = super.tableView(ListTableView, cellForRowAt: indexPath)
     
         cell.textLabel?.text = categories[indexPath.row].name
-    
-        return cell
         
+        cell.backgroundColor = UIColor.flatSkyBlue().darken(byPercentage:
+        
+            CGFloat(indexPath.row) / CGFloat(categories.count)
+            
+        )
+        cell.textLabel?.textColor = UIColor.flatWhite()
+        cell.textLabel?.font = UIFont.init(name: "Euphemia UCAS", size: CGFloat(21.0))
+        
+        return cell
     }
     
     
@@ -142,6 +150,12 @@ class CategoryViewController: SwipeTableViewController {
         
         performSegue(withIdentifier: "goToChat", sender: self)
     }
+    
+    @IBAction func LogOutPressed(_ sender: UIBarButtonItem) {
+
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
 }
 

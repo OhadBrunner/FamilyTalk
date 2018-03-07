@@ -26,7 +26,7 @@ class ModelSQL{
     var database: OpaquePointer? = nil
     
     init?(){
-        let dbFileName = "database.db"
+        let dbFileName = "database1.db"
         if let dir = FileManager.default.urls(for: .documentDirectory, in:
             .userDomainMask).first{
             let path = dir.appendingPathComponent(dbFileName)
