@@ -28,7 +28,7 @@ class CategoryViewController: SwipeTableViewController {
         
         loadCategories()
         
-        ListTableView.separatorStyle = .none
+        //ListTableView.separatorStyle = .none
     }
     
     //MARK: - TableView DataSource Methods
@@ -104,7 +104,7 @@ class CategoryViewController: SwipeTableViewController {
         ListTableView.reloadData()
     }
     
-    //MARK: - Delete Data From Swipe
+    //MARK: - Deleting Data From Swipe
     
     override func updateModel(at indexPath: IndexPath) {
         
@@ -113,8 +113,7 @@ class CategoryViewController: SwipeTableViewController {
     
     }
     
-    
-    //MARK: - Add New Categories
+    //MARK: - Adding New Categories
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
@@ -145,7 +144,6 @@ class CategoryViewController: SwipeTableViewController {
         
     }
     
-    
     @IBAction func FamilyTalkPressed(_ sender: UIBarButtonItem) {
         
         performSegue(withIdentifier: "goToChat", sender: self)
@@ -155,7 +153,6 @@ class CategoryViewController: SwipeTableViewController {
 
         self.dismiss(animated: true, completion: nil)
     }
-    
     
 }
 

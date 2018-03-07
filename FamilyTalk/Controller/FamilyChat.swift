@@ -33,6 +33,7 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     let barHeight: CGFloat = 50
     var currentUser: UserModel?
     var currentUserID : String = ""
+    var activeField: UITextField?
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -89,20 +90,9 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         self.animateExtraButtons(toHide: false)
     }
     
-    
-    
-    
-    
-    ///////////////////////////////////////////////////////////////////
-    
-    
-    
-    
+
     func composeMessage(type: MessageType, content: Any)  {
         let message = MessageModel.init(type: type, content: content, owner: .sender, fromID: self.currentUserID, timestamp: Int(Date().timeIntervalSince1970))
-        //the app supposed to know only the Model class!
-        //MessageModel.saveMessageToFirebase(message: message, completion: {(_) in
-        //})
         Model.instance.addMessage(msg: message)
     }
     
@@ -112,19 +102,16 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
             if !text.isEmpty {
                 self.composeMessage(type: .text, content: self.inputTextField.text!)
                 self.inputTextField.text = ""
-            }
-        }
-    }
-    
-    
-    //MARK: NotificationCenter handlers
-    @objc func showKeyboard(notification: Notification) {
-        if let frame = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as? NSValue {
-            let height = frame.cgRectValue.height
-            self.tableView.contentInset.bottom = height
-            self.tableView.scrollIndicatorInsets.bottom = height
-            if self.items.count > 0 {
-                self.tableView.scrollToRow(at: IndexPath.init(row: self.items.count - 1, section: 0), at: .bottom, animated: true)
+                
+                _ = ModelNotification.messagesList.observe { (list) in
+                    
+                    if list != nil {
+                        self.items = list!
+                        self.tableView.reloadData()
+                    }
+                }
+                
+                Model.instance.getAllMessagesAndObserve()
             }
         }
     }
@@ -212,6 +199,20 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         return true
     }
     
+    
+    //MARK: NotificationCenter handlers
+    @objc func showKeyboard(notification: Notification) {
+        if let frame = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            let height = frame.cgRectValue.height
+            self.tableView.contentInset.bottom = height
+            self.tableView.scrollIndicatorInsets.bottom = height
+            if self.items.count > 0 {
+                self.tableView.scrollToRow(at: IndexPath.init(row: self.items.count - 1, section: 0), at: .bottom, animated: true)
+            }
+        }
+    }
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
             self.composeMessage(type: .photo, content: pickedImage)
@@ -228,6 +229,7 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         super.viewDidAppear(animated)
         self.inputBar.backgroundColor = UIColor.clear
         self.view.layoutIfNeeded()
+         NotificationCenter.default.addObserver(self, selector: #selector(showKeyboard(notification:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -238,6 +240,7 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     override func viewDidLoad() {
         super.viewDidLoad()
         currentUserID = UserModel.getCurrentUserID()
+        
         self.customization()
         
         _ = ModelNotification.messagesList.observe { (list) in

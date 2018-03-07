@@ -16,10 +16,6 @@ extension MessageModel {
     static func downloadAllMessages(_ lastUpdateDate:Date?, completion: @escaping ([MessageModel]) -> Void) {
         
         if let currentUserID = Auth.auth().currentUser?.uid {
-//            let messageDB = Database.database().reference().child("Messages")
-//
-//            let handler = messageDB.observe(.childAdded) {
-//                (snapshot:DataSnapshot) in
             
             let handler = {(snapshot:DataSnapshot) in
                 var items = [MessageModel]()
@@ -124,26 +120,8 @@ extension MessageModel {
         ref.removeAllObservers()
     }
     
-//
-//    static func downloadImage(message: MessageModel, completion: @escaping (Bool) -> Swift.Void) {
-//
-//
-//        let ref = Storage.storage().reference().child("messagePics").child(message.)
-//
-//        let ref = Storage.storage().reference(forURL: url)
-//        ref.data(withMaxSize: 10000000, completion: {(data, error) in
-//            if (error == nil && data != nil){
-//                let image = UIImage(data: data!)
-//                callback(image)
-//            }else{
-//                callback(nil)
-//            }
-//        })
-//    }
-
     
-    
-    class func downloadImage(message: MessageModel, completion: @escaping (Bool) -> Swift.Void)  {
+    static func downloadImage(message: MessageModel, completion: @escaping (Bool) -> Void)  {
         if message.type == .photo {
             let imageLink = message.content as! String
             let imageURL = URL.init(string: imageLink)
@@ -157,7 +135,7 @@ extension MessageModel {
     }
     
     
-    class func saveMessageImageToFirebase(imageData: Data, child: String, completion: @escaping (String?) -> Void) {
+    static func saveMessageImageToFirebase(imageData: Data, child: String, completion: @escaping (String?) -> Void) {
         
         Storage.storage().reference().child("messagePics").child(child).putData(imageData, metadata: nil) {
             (metadata, error) in
@@ -168,7 +146,7 @@ extension MessageModel {
         }
     }
     
-    class func saveMessageToFirebase(values: [String:Any], completion: @escaping (Bool) -> Swift.Void)  {
+    static func saveMessageToFirebase(values: [String:Any], completion: @escaping (Bool) -> Void)  {
         
         Database.database().reference().child("Messages").childByAutoId().setValue(values) {
             (error, reference) in

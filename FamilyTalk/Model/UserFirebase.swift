@@ -16,7 +16,7 @@ extension UserModel {
     
     
     //MARK: Methods
-    class func registerUser(withName: String, email: String, password: String, profilePic: UIImage, completion: @escaping (Bool) -> Swift.Void) {
+    static func registerUser(withName: String, email: String, password: String, profilePic: UIImage, completion: @escaping (Bool) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
             if error == nil {
                 let storageRef = Storage.storage().reference().child("usersProfilePics").child(user!.uid)
@@ -40,7 +40,7 @@ extension UserModel {
     }
     
     
-    class func loginUser(withEmail: String, password: String, completion: @escaping (Bool) -> Swift.Void) {
+    static func loginUser(withEmail: String, password: String, completion: @escaping (Bool) -> Void) {
         Auth.auth().signIn(withEmail: withEmail, password: password, completion: { (user, error) in
             if error == nil {
                 completion(true)
@@ -50,7 +50,7 @@ extension UserModel {
         })
     }
     
-    class func getCurrentUserID() -> String {
+    static func getCurrentUserID() -> String {
         
         
         let id = Auth.auth().currentUser?.uid as String!
@@ -58,7 +58,7 @@ extension UserModel {
     }
     
     
-    class func getUserProfilePic(forID: String, completion: @escaping (UIImage) -> Void) {
+    static func getUserProfilePic(forID: String, completion: @escaping (UIImage) -> Void) {
         
         let storageRef = Storage.storage().reference().child("usersProfilePics").child(forID)
         storageRef.getData(maxSize: 10000000) {

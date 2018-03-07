@@ -11,8 +11,7 @@ import UIKit
 import CoreData
 
 class ItemsViewController: SwipeTableViewController {
-    
-    
+
     var itemArray = [Item]()
     
     var selectedCategory : Category? {
@@ -27,6 +26,8 @@ class ItemsViewController: SwipeTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = selectedCategory?.name
+        //self.tableView.separatorStyle = .none
         //print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
     
@@ -52,8 +53,6 @@ class ItemsViewController: SwipeTableViewController {
         )
         cell.textLabel?.textColor = UIColor.flatWhite()
         cell.textLabel?.font = UIFont.init(name: "Euphemia UCAS", size: CGFloat(21.0))
-        
-        //item.done == true ? cell.accessoryType = .checkmark : cell.accessoryType = .none
         cell.accessoryType = item.done == true ? .checkmark : .none // shortened
         
         return cell
