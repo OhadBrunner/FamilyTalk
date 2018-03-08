@@ -13,8 +13,6 @@ import Firebase
 extension UserModel {
     
     
-    
-    
     //MARK: Methods
     static func registerUser(withName: String, email: String, password: String, profilePic: UIImage, completion: @escaping (Bool) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
@@ -50,8 +48,8 @@ extension UserModel {
         })
     }
     
+    
     static func getCurrentUserID() -> String {
-        
         
         let id = Auth.auth().currentUser?.uid as String!
         return id!

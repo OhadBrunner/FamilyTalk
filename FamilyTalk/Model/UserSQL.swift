@@ -11,9 +11,5 @@ import UIKit
 
 extension UserModel {
     
-    
-    
-    
-    
 }
 

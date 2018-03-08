@@ -35,12 +35,10 @@ extension MessageModel {
                 
                             if fromID == currentUserID {
                                 let message = MessageModel.init(type: type, content: content, owner: .receiver, fromID: fromID, timestamp: timestamp)
-                                //completion(message)
                                 items.append(message)
                             }
                             else {
                                 let message = MessageModel.init(type: type, content: content, owner: .sender, fromID: fromID, timestamp: timestamp)
-                                //completion(message)
                                 items.append(message)
                             }
                         }
@@ -88,12 +86,10 @@ extension MessageModel {
                             
                             if fromID == currentUserID {
                                 let message = MessageModel.init(type: type, content: content, owner: .receiver, fromID: fromID, timestamp:  timestamp)
-                                //completion(message)
                                 items.append(message)
                             }
                             else {
                                 let message = MessageModel.init(type: type, content: content, owner: .sender, fromID: fromID, timestamp: timestamp)
-                                //completion(message)
                                 items.append(message)
                             }
                         }

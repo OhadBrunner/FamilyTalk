@@ -20,7 +20,6 @@ class MessageModel {
     var content: Any
     var timestamp: Int
     var image: UIImage?
-    //var imageURL: String? //FOR SQL
     var fromID: String
     var lastUpdate:Date?
     

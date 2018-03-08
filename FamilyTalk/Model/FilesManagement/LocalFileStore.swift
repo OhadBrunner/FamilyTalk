@@ -14,7 +14,6 @@ class LocalFileStore {
 static func saveImageToFile(image: UIImage, name:String){
     if let data = UIImageJPEGRepresentation(image, 0.8) {
         let filename = getDocumentsDirectory().appendingPathComponent(name)
-        //print(filename)
         try? data.write(to: filename)
     }
 }

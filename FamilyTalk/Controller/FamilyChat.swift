@@ -110,7 +110,6 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
                         self.tableView.reloadData()
                     }
                 }
-                
                 Model.instance.getAllMessagesAndObserve()
             }
         }

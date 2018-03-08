@@ -31,11 +31,9 @@ class ModelFileStore {
         let localImageName = "\(message.timestamp)"
         if let image = LocalFileStore.getImageFromFile(name: localImageName){
             message.image = image
-            //print("from local")
             callback(true)
         }else{
             //2. get the image from Firebase
-            //print("from firebase")
             MessageModel.downloadImage(message: message) {
                 (state) in
                 if state == true {

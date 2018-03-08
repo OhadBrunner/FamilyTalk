@@ -84,7 +84,7 @@ extension MessageModel {
                 let conent =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,2))
                 let fromId =  String(validatingUTF8:sqlite3_column_text(sqlite3_stmt,3))
                 //let update =  Double(sqlite3_column_double(sqlite3_stmt,4))
-                print("read from filter st: \(String(describing: timeStamp)) \(String(describing: type)) \(String(describing: conent))")
+                //print("read from filter st: \(String(describing: timeStamp)) \(String(describing: type)) \(String(describing: conent))")
                 
                 let message = MessageModel(_type: type!, _content: conent!, _fromID: fromId!, _timestamp: timeStamp!)
                 messages.append(message)

@@ -23,12 +23,8 @@ class CategoryViewController: SwipeTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-        
+ 
         loadCategories()
-        
-        //ListTableView.separatorStyle = .none
     }
     
     //MARK: - TableView DataSource Methods

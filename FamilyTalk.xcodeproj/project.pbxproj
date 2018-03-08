@@ -18,7 +18,6 @@
 		F927AE4B204C3A3100C87CED /* Helper Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE4A204C3A3100C87CED /* Helper Files.swift */; };
 		F927AE4D204C3AB100C87CED /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F927AE4C204C3AB100C87CED /* libsqlite3.0.tbd */; };
 		F927AE4F204C3C5300C87CED /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE4E204C3C5300C87CED /* Model.swift */; };
-		F927AE51204C3C7100C87CED /* ModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE50204C3C7100C87CED /* ModelFirebase.swift */; };
 		F927AE53204C3C8900C87CED /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE52204C3C8900C87CED /* UserModel.swift */; };
 		F927AE55204C3CA600C87CED /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE54204C3CA600C87CED /* MessageModel.swift */; };
 		F927AE57204C3CC400C87CED /* MessageFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE56204C3CC400C87CED /* MessageFirebase.swift */; };
@@ -36,7 +35,6 @@
 		F9443540204C2F27002B65E0 /* FamilyTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944353F204C2F27002B65E0 /* FamilyTalkTests.swift */; };
 		F944354B204C2F27002B65E0 /* FamilyTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944354A204C2F27002B65E0 /* FamilyTalkUITests.swift */; };
 		F97AF114204EBCAD00AC1121 /* LocalFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AF113204EBCAD00AC1121 /* LocalFileStore.swift */; };
-		F97AF116204EBCBA00AC1121 /* FirebaseFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AF115204EBCBA00AC1121 /* FirebaseFileStore.swift */; };
 		F97AF118204EBCC600AC1121 /* ModelFilesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AF117204EBCC600AC1121 /* ModelFilesStore.swift */; };
 		F9B5FF1E204C517600F354EA /* dataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9B5FF1C204C517600F354EA /* dataBase.xcdatamodeld */; };
 		F9F81C96204D713A00813DCB /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F81C95204D713A00813DCB /* SwipeTableViewController.swift */; };
@@ -78,7 +76,6 @@
 		F927AE4A204C3A3100C87CED /* Helper Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper Files.swift"; sourceTree = "<group>"; };
 		F927AE4C204C3AB100C87CED /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		F927AE4E204C3C5300C87CED /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		F927AE50204C3C7100C87CED /* ModelFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFirebase.swift; sourceTree = "<group>"; };
 		F927AE52204C3C8900C87CED /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F927AE54204C3CA600C87CED /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		F927AE56204C3CC400C87CED /* MessageFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFirebase.swift; sourceTree = "<group>"; };
@@ -103,7 +100,6 @@
 		F944354A204C2F27002B65E0 /* FamilyTalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTalkUITests.swift; sourceTree = "<group>"; };
 		F944354C204C2F27002B65E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F97AF113204EBCAD00AC1121 /* LocalFileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileStore.swift; sourceTree = "<group>"; };
-		F97AF115204EBCBA00AC1121 /* FirebaseFileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFileStore.swift; sourceTree = "<group>"; };
 		F97AF117204EBCC600AC1121 /* ModelFilesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFilesStore.swift; sourceTree = "<group>"; };
 		F9B5FF1D204C517600F354EA /* iOS_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_App.xcdatamodel; sourceTree = "<group>"; };
 		F9F81C95204D713A00813DCB /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +165,6 @@
 				F97AF112204EBC9C00AC1121 /* FilesManagement */,
 				F9B5FF1C204C517600F354EA /* dataBase.xcdatamodeld */,
 				F927AE4E204C3C5300C87CED /* Model.swift */,
-				F927AE50204C3C7100C87CED /* ModelFirebase.swift */,
 				F927AE52204C3C8900C87CED /* UserModel.swift */,
 				F927AE54204C3CA600C87CED /* MessageModel.swift */,
 				F927AE56204C3CC400C87CED /* MessageFirebase.swift */,
@@ -274,7 +269,6 @@
 			isa = PBXGroup;
 			children = (
 				F97AF113204EBCAD00AC1121 /* LocalFileStore.swift */,
-				F97AF115204EBCBA00AC1121 /* FirebaseFileStore.swift */,
 				F97AF117204EBCC600AC1121 /* ModelFilesStore.swift */,
 			);
 			path = FilesManagement;
@@ -589,7 +583,6 @@
 			files = (
 				F927AE4F204C3C5300C87CED /* Model.swift in Sources */,
 				F97AF114204EBCAD00AC1121 /* LocalFileStore.swift in Sources */,
-				F97AF116204EBCBA00AC1121 /* FirebaseFileStore.swift in Sources */,
 				F927AE46204C39D100C87CED /* FamilyChat.swift in Sources */,
 				F927AE5F204C3D3000C87CED /* UserFirebase.swift in Sources */,
 				F927AE42204C399200C87CED /* CategoryViewController.swift in Sources */,
@@ -606,7 +599,6 @@
 				F927AE61204C3D4D00C87CED /* UserSQL.swift in Sources */,
 				F927AE5B204C3CFF00C87CED /* ModelSQL.swift in Sources */,
 				F9443528204C2F27002B65E0 /* AppDelegate.swift in Sources */,
-				F927AE51204C3C7100C87CED /* ModelFirebase.swift in Sources */,
 				F927AE53204C3C8900C87CED /* UserModel.swift in Sources */,
 				F9B5FF1E204C517600F354EA /* dataBase.xcdatamodeld in Sources */,
 				F927AE5D204C3D1900C87CED /* LastUpdateTable.swift in Sources */,

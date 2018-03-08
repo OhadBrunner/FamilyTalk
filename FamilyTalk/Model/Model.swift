@@ -33,8 +33,6 @@ class ModelNotificationBase<T>{
 }
 
 class ModelNotification{
-//    static let StudentList = ModelNotificationBase<[Student]>(name: "StudentListNotificatio")
-//    static let Student = ModelNotificationBase<Student>(name: "StudentNotificatio")
     
     static let messagesList = ModelNotificationBase<[MessageModel]>(name: "messagesListNotificatio")
     static let Message = ModelNotificationBase<MessageModel>(name: "MessageNotificatio")
@@ -45,15 +43,11 @@ class ModelNotification{
 }
 
 
-
-
 class Model {
     
     static let instance = Model()
     
     lazy private var modelSQL:ModelSQL? = ModelSQL()
-    lazy private var modelFirebase:ModelFirebase? = ModelFirebase()
-    
     
     private init(){
     }
@@ -85,7 +79,6 @@ class Model {
         msg.addMessageToLocalDb(database: self.modelSQL?.database)
     }
     
-
     
     func getAllMessages(callback:@escaping ([MessageModel])->Void){
         print("Model.getAllMessages")

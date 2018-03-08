@@ -27,8 +27,6 @@ class ItemsViewController: SwipeTableViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = selectedCategory?.name
-        //self.tableView.separatorStyle = .none
-        //print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
     
     //MARK: - Tableview Datasource Methods
@@ -46,7 +44,7 @@ class ItemsViewController: SwipeTableViewController {
         
         cell.textLabel?.text = item.title
         
-        cell.backgroundColor = UIColor.purple.darken(byPercentage:
+        cell.backgroundColor = UIColor.flatPowderBlue().darken(byPercentage:
             
             CGFloat(indexPath.row) / CGFloat(itemArray.count)
             
@@ -88,7 +86,7 @@ class ItemsViewController: SwipeTableViewController {
             (action) in
             //what will happen once the user clicks the Add Item button on our UIAlert
             
-            let newItem = Item(context: self.context) //?
+            let newItem = Item(context: self.context)
             newItem.title = textField.text!
             newItem.done = false
             newItem.parentCategory = self.selectedCategory

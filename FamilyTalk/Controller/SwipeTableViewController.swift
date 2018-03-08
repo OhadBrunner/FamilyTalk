@@ -15,7 +15,6 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         super.viewDidLoad()
 
         tableView.rowHeight = 80.0
-        
     }
     
     // TableView DataSource Methods
@@ -38,8 +37,6 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
                 // handle action by updating model with deletion
                 
                 self.updateModel(at: indexPath)
-
-                //self.ListTableView.reloadData()
             }
             
             // customize the action appearance
@@ -50,13 +47,11 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeTableOptions {
             var options = SwipeTableOptions()
             options.expansionStyle = .destructive
-            //options.transitionStyle = .border
             return options
         }
         
     func updateModel(at indexPath: IndexPath){
         //update our data model
     }
-
-
+    
 }
