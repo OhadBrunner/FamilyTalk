@@ -16,6 +16,7 @@ pod 'Firebase/Storage'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'
 pod 'SwipeCellKit'
+pod 'RealmSwift'
 
 
   target 'FamilyTalkTests' do
