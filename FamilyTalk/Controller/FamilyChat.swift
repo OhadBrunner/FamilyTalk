@@ -35,7 +35,7 @@ class FamilyChat: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     var currentUserID : String = ""
     var activeField: UITextField?
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    //let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     //MARK: Methods
     func customization() {

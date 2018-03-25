@@ -8,30 +8,34 @@
 
 
 import UIKit
-import CoreData
 import ChameleonFramework
+import RealmSwift
 
 class CategoryViewController: SwipeTableViewController {
     
+    let realm = try! Realm()
     
-    var categories = [Category]()
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var categories: Results<Category>!
     
     @IBOutlet weak var ListTableView: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        navigationController?.navigationBar.barTintColor = UIColor.flatPowderBlue()
         loadCategories()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        navigationController?.navigationBar.tintColor = UIColor.flatWhite()
     }
     
     //MARK: - TableView DataSource Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return categories.count
+        return categories?.count ?? 1 // if categories is not nil, return it's count, otherwise return 1
     }
     
     
@@ -39,9 +43,9 @@ class CategoryViewController: SwipeTableViewController {
         
         let cell = super.tableView(ListTableView, cellForRowAt: indexPath)
     
-        cell.textLabel?.text = categories[indexPath.row].name
+        cell.textLabel?.text = categories?[indexPath.row].name ?? "No Categories Added Yet."
         
-        cell.backgroundColor = UIColor.flatSkyBlue().darken(byPercentage:
+        cell.backgroundColor = UIColor.flatPowderBlue().darken(byPercentage:
         
             CGFloat(indexPath.row) / CGFloat(categories.count)
             
@@ -67,7 +71,7 @@ class CategoryViewController: SwipeTableViewController {
             let destinationVC = segue.destination as! ItemsViewController
             
             if let indexPath = ListTableView.indexPathForSelectedRow {
-                destinationVC.selectedCategory = categories[indexPath.row]
+                destinationVC.selectedCategory = categories?[indexPath.row]
                 
             }
         }
@@ -75,10 +79,12 @@ class CategoryViewController: SwipeTableViewController {
     
     //MARK: - Data Manipulation Methods
     
-    func saveCategory() {
+    func save(category: Category) {
         
         do {
-            try context.save()
+            try realm.write {
+                realm.add(category)
+            }
         } catch {
             print("Error saving category \(error)")
         }
@@ -88,14 +94,7 @@ class CategoryViewController: SwipeTableViewController {
     
     func loadCategories() {
         
-        //this is the request we are going to send in order to retrieve our data from the data base
-        let request : NSFetchRequest<Category> = Category.fetchRequest()
-        
-        do {
-            categories = try context.fetch(request)
-        } catch {
-            print("Error loading categories \(error)")
-        }
+        categories = realm.objects(Category.self)
         
         ListTableView.reloadData()
     }
@@ -104,8 +103,15 @@ class CategoryViewController: SwipeTableViewController {
     
     override func updateModel(at indexPath: IndexPath) {
         
-        self.context.delete(self.categories[indexPath.row])
-        self.categories.remove(at: indexPath.row)
+        if let categoryForDeletion = self.categories?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(categoryForDeletion)
+                }
+            } catch {
+                print("Error deleting category, \(error)")
+            }
+        }
     
     }
     
@@ -119,12 +125,10 @@ class CategoryViewController: SwipeTableViewController {
         
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
             
-            let newCategory = Category(context: self.context)
+            let newCategory = Category()
             newCategory.name = textField.text!
             
-            self.categories.append(newCategory)
-            
-            self.saveCategory()
+            self.save(category: newCategory)
         }
         
         alert.addAction(action)

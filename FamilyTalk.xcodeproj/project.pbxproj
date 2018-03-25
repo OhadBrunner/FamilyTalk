@@ -28,6 +28,8 @@
 		F927AE61204C3D4D00C87CED /* UserSQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927AE60204C3D4D00C87CED /* UserSQL.swift */; };
 		F927AE63204C3E6E00C87CED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F927AE62204C3E6E00C87CED /* GoogleService-Info.plist */; };
 		F927AE66204C3EEE00C87CED /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = F927AE65204C3EEE00C87CED /* test.m */; };
+		F92A6F282055777F00C72F2D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A6F272055777F00C72F2D /* Item.swift */; };
+		F92A6F2A2055778800C72F2D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92A6F292055778800C72F2D /* Category.swift */; };
 		F9443528204C2F27002B65E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9443527204C2F27002B65E0 /* AppDelegate.swift */; };
 		F944352D204C2F27002B65E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F944352B204C2F27002B65E0 /* Main.storyboard */; };
 		F9443532204C2F27002B65E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9443531204C2F27002B65E0 /* Assets.xcassets */; };
@@ -36,7 +38,6 @@
 		F944354B204C2F27002B65E0 /* FamilyTalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944354A204C2F27002B65E0 /* FamilyTalkUITests.swift */; };
 		F97AF114204EBCAD00AC1121 /* LocalFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AF113204EBCAD00AC1121 /* LocalFileStore.swift */; };
 		F97AF118204EBCC600AC1121 /* ModelFilesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AF117204EBCC600AC1121 /* ModelFilesStore.swift */; };
-		F9B5FF1E204C517600F354EA /* dataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9B5FF1C204C517600F354EA /* dataBase.xcdatamodeld */; };
 		F9F81C96204D713A00813DCB /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F81C95204D713A00813DCB /* SwipeTableViewController.swift */; };
 		F9F81C98204EB9BD00813DCB /* Date+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F81C97204EB9BD00813DCB /* Date+Firebase.swift */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,8 @@
 		F927AE62204C3E6E00C87CED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F927AE64204C3EED00C87CED /* FamilyTalk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FamilyTalk-Bridging-Header.h"; sourceTree = "<group>"; };
 		F927AE65204C3EEE00C87CED /* test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
+		F92A6F272055777F00C72F2D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F92A6F292055778800C72F2D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F9443524204C2F26002B65E0 /* FamilyTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FamilyTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9443527204C2F27002B65E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F944352C204C2F27002B65E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,7 +104,6 @@
 		F944354C204C2F27002B65E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F97AF113204EBCAD00AC1121 /* LocalFileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileStore.swift; sourceTree = "<group>"; };
 		F97AF117204EBCC600AC1121 /* ModelFilesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFilesStore.swift; sourceTree = "<group>"; };
-		F9B5FF1D204C517600F354EA /* iOS_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_App.xcdatamodel; sourceTree = "<group>"; };
 		F9F81C95204D713A00813DCB /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		F9F81C97204EB9BD00813DCB /* Date+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Firebase.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,8 +164,8 @@
 		F927AE3C204C391400C87CED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F92A6F222055719600C72F2D /* Data Model */,
 				F97AF112204EBC9C00AC1121 /* FilesManagement */,
-				F9B5FF1C204C517600F354EA /* dataBase.xcdatamodeld */,
 				F927AE4E204C3C5300C87CED /* Model.swift */,
 				F927AE52204C3C8900C87CED /* UserModel.swift */,
 				F927AE54204C3CA600C87CED /* MessageModel.swift */,
@@ -208,6 +210,15 @@
 				F927AE4A204C3A3100C87CED /* Helper Files.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F92A6F222055719600C72F2D /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				F92A6F292055778800C72F2D /* Category.swift */,
+				F92A6F272055777F00C72F2D /* Item.swift */,
+			);
+			path = "Data Model";
 			sourceTree = "<group>";
 		};
 		F944351B204C2F26002B65E0 = {
@@ -591,6 +602,7 @@
 				F927AE5F204C3D3000C87CED /* UserFirebase.swift in Sources */,
 				F927AE42204C399200C87CED /* CategoryViewController.swift in Sources */,
 				F9F81C96204D713A00813DCB /* SwipeTableViewController.swift in Sources */,
+				F92A6F282055777F00C72F2D /* Item.swift in Sources */,
 				F927AE44204C39B000C87CED /* ItemsViewController.swift in Sources */,
 				F927AE59204C3CE400C87CED /* MessageSQL.swift in Sources */,
 				F97AF118204EBCC600AC1121 /* ModelFilesStore.swift in Sources */,
@@ -604,9 +616,9 @@
 				F927AE5B204C3CFF00C87CED /* ModelSQL.swift in Sources */,
 				F9443528204C2F27002B65E0 /* AppDelegate.swift in Sources */,
 				F927AE53204C3C8900C87CED /* UserModel.swift in Sources */,
-				F9B5FF1E204C517600F354EA /* dataBase.xcdatamodeld in Sources */,
 				F927AE5D204C3D1900C87CED /* LastUpdateTable.swift in Sources */,
 				F9F81C98204EB9BD00813DCB /* Date+Firebase.swift in Sources */,
+				F92A6F2A2055778800C72F2D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,20 +929,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		F9B5FF1C204C517600F354EA /* dataBase.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F9B5FF1D204C517600F354EA /* iOS_App.xcdatamodel */,
-			);
-			currentVersion = F9B5FF1D204C517600F354EA /* iOS_App.xcdatamodel */;
-			name = dataBase.xcdatamodeld;
-			path = "../../../ios_app/iOS_App/Model/Data Model/dataBase.xcdatamodeld";
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = F944351C204C2F26002B65E0 /* Project object */;
 }
